@@ -1,0 +1,45 @@
+name: PF2e Inline Traits CI
+
+on:
+  pull_request:
+    branches: [master]
+  push:
+    branches: [master, release]
+  workflow_dispatch:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [16.x]
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Cache NPM Deps
+        id: cache-npm
+        uses: actions/cache@v3
+        with:
+          path: node_modules/
+          key: npm-${{ hashFiles('package-lock.json') }}
+
+      - name: Install NPM Deps
+        if: ${{ steps.cache-npm.outputs.cache-hit != 'true' }}
+        run: |
+          npm ci
+
+      - name: Lint
+        run: |
+          npm run lint
+
+      - name: Build
+        run: |
+          node_modules/.bin/tsx ./esbuild-script.ts

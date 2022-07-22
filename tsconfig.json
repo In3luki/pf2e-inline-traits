@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+        "target": "ES2022",
+        "module": "commonjs",
+        "lib": ["esnext", "dom"],
+        "strict": true,
+        "noEmit": true,
+        "noFallthroughCasesInSwitch": true,
+        "noImplicitOverride": true,
+        "noImplicitReturns": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+
+        "forceConsistentCasingInFileNames": true,
+        "esModuleInterop": true,
+        "sourceMap": true,
+        "baseUrl": ".",
+        "allowUnusedLabels": false,
+        "removeComments": false,
+        "resolveJsonModule": true,
+        "typeRoots": [
+            "node_modules/@types",
+        ]
+    },
+}

@@ -1,0 +1,11 @@
+# IDE
+.idea/
+.vs/
+icons/\!dox/
+
+/.vscode
+/dist-example
+/node_modules/
+/dist/*
+package/
+/src/premiumize.log
