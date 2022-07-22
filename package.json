@@ -1,0 +1,26 @@
+{
+  "name": "pf2e-inline-scripts",
+  "version": "1.0.0",
+  "description": "Add traits to chat messages created by @Check rolls.",
+  "private": true,
+  "scripts": {
+    "build": "tsx esbuild-script.ts",
+    "build:dev": "tsx esbuild-script.ts --mode watch",
+    "lint": "eslint ./src --ext .ts"
+  },
+  "author": "In3luki",
+  "license": "Apache 2.0",
+  "devDependencies": {
+    "@types/node": "^18.0.6",
+    "@typescript-eslint/eslint-plugin": "^5.30.6",
+    "@typescript-eslint/parser": "^5.30.6",
+    "esbuild": "^0.14.49",
+    "esbuild-plugin-copy": "^1.3.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-node": "^0.3.6",
+    "eslint-import-resolver-typescript": "^3.2.5",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "tsx": "^3.8.0"
+  }
+}
