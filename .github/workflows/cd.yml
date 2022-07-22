@@ -56,5 +56,5 @@ jobs:
           draft: false
           prerelease: false
           token: ${{ secrets.GITHUB_TOKEN }}
-          artifacts: './dist/module.json,./dist/pf2e-inline.traits.zip'
+          artifacts: './dist/module.json,./dist/pf2e-inline-traits.zip'
           tag: latest
