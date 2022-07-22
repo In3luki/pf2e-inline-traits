@@ -2,8 +2,8 @@
   "name": "pf2e-inline-traits",
   "title": "PF2e Inline Traits",
   "version": "1.0.0",
-  "minimumCoreVersion": "1.0.0",
-  "compatibleCoreVersion": "1.0.0",
+  "minimumCoreVersion": "9.269",
+  "compatibleCoreVersion": "9.269",
   "author": "In3luki",
   "description": "Add traits to chat messages created by @Check rolls.",
   "scripts": [
