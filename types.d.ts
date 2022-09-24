@@ -22,12 +22,10 @@ declare global {
     const Hooks: Hooks;
 
     interface ChatMessage {
-        data: {
-            update: (data: Record<string, unknown>) => void;
-        };
+        updateSource: (data: Record<string, unknown>) => void;
     }
 
-    interface ChatMessageData {
+    interface ChatMessageSource {
         flags: {
             pf2e: {
                 context?: {

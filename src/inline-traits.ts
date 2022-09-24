@@ -2,11 +2,11 @@ const domParser = new DOMParser();
 
 const preCreateHook = (
     chatMessage: ChatMessage,
-    messageData: ChatMessageData,
+    messageData: ChatMessageSource,
     _options: Record<string, unknown>,
     _userId: string
 ) => {
-    const context = messageData.flags.pf2e?.context;
+    const context = messageData.flags?.pf2e?.context;
     if (context?.options) {
         const flavorString = messageData.flavor;
         if (flavorString) {
@@ -28,7 +28,7 @@ const preCreateHook = (
                         tags.appendChild(newTag);
                     }
                 }
-                chatMessage.data.update({ flavor: flavor.body.innerHTML });
+                chatMessage.updateSource({ flavor: flavor.body.innerHTML });
             }
         }
     }
